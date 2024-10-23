@@ -1,4 +1,5 @@
 const express = require('express')
+require('dotenv').config();
 const cors = require('cors')
 const app = express()
 
@@ -21,6 +22,6 @@ io.on('connection', (socket) => {
     )
 })
 
-server.listen(8080, '0.0.0.0',()=>{
+server.listen(process.env,PORT, '0.0.0.0',()=>{
     console.log('Servidor running')
 })
